@@ -1,0 +1,170 @@
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
+
+.hidden-widget-input {
+    display: none;
+}
+
+.widget-content label:not(:first-of-type) {
+    margin-top: 10px;
+}
+
+.widget-content label:not(.hidden-widget-input) {
+    display: block;
+}
+
+.widget-content label {
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.widget-content label + span {
+    display: block;
+    margin: 5px 0;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.widget-content label[for="wpml-language"] {
+    display: none;
+}
+
+.widget-content #wpml-language {
+    display: none;
+}
+
+.widget-image {
+    max-width: 80%;
+    margin: 10px auto 0 auto;
+    padding: 0;
+    border: 3px solid #ddd;
+    background-color: #DDD;
+}
+
+.slides-wrapper {
+    margin-top: 10px;
+}
+
+.slide-wrapper {
+    display: flex;
+    padding: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1em;
+    line-height: 1;
+    overflow: hidden;
+    background: #fafafa;
+    color: #23282d;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 600;
+}
+
+.slide-wrapper .slide-title {
+    max-width: 76%;
+    padding-left: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #666;
+    flex: 1 1 auto;
+}
+
+.slide-content {
+    display: none;
+    margin-top: 10px;
+    padding: 5px 8px 8px 8px;
+    flex: 1 1 100%;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.slide-toggler {
+    cursor: pointer;
+}
+
+.slide-toggler::before {
+    display: block;
+    padding: 1px 2px 1px 0;
+    content: "\f140";
+    font: normal 20px/1 dashicons;
+    speak: none;
+    text-decoration: none!important;
+    border-radius: 50%;
+}
+
+.slide-delete {
+    cursor: pointer;
+}
+
+.slide-delete::before {
+    display: block;
+    padding: 1px 2px 1px 0;
+    content: "\f335";
+    font: normal 20px/1 dashicons;
+    speak: none;
+    text-decoration: none!important;
+    border-radius: 50%;
+}
+
+.slide-wrapper .button {
+    margin-top: 10px;
+}
+
+.button.slide-add {
+    margin-top: 10px;
+}
+
+button.select-custom-image.button {
+    display: block;
+}
+
+button.select-custom-image.button + .custom-image-label {
+    margin-top: 35px;
+}
+
+.sortable-widget > div {
+    cursor: pointer;
+}
+
+.widgets-holder-wrap .widget-inside {
+    position: relative;
+    padding: 8px 15px 15px 15px;
+}
+
+.widgets-holder-wrap .widget-inside::before {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    content: " ";
+    background-color: transparent;
+    font-size: 20px;
+    color: transparent;
+    transition: background-color 300ms ease-in, color 300ms ease-in;
+    z-index: -1;
+}
+
+.widgets-holder-wrap .widget-inside.widget-ajax-action::before {
+    background-color: rgba(0,0,0,0.45);
+    color: white;
+    content: "Loading...";
+    z-index: 999;
+}
+
+select.edit-menu-item-icon {
+    height: 33px;
+}
+
+select.edit-menu-item-icon, select.edit-menu-item-icon option {
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+    font-weight: 900;
+    font-size: 20px;
+}

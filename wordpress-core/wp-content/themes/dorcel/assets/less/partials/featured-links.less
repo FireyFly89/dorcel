@@ -1,0 +1,140 @@
+.featured__links {
+    padding: 5px 0;
+    max-width: 100vw;
+    width: 100%;
+
+    @media @query-min-smallDevice {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .slick-list {
+        padding-right: 20px;
+    }
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+
+        @media @query-min-smallDevice {
+            flex-basis: calc(50% - 10px);
+            margin: 0 5px;
+        }
+
+        @media @query-min-largeDevice {
+            flex-basis: calc(25% - 10px);
+        }
+
+        &:nth-child(3) {
+            p {
+                color: white;
+            }
+        }
+
+        &:hover {
+            a > img {
+                transform: scale(1.07);
+            }
+        }
+
+        img {
+            transform: scale(1);
+            transition: all ease-out .25s;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            display: block;
+            position: relative;
+            height: 100%;
+            color: white;
+            overflow: hidden;
+        }
+    }
+
+    &__content {
+        .innerBox;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.1) 100%);
+
+        @media @query-min-smallDevice {
+            padding: 15px 20px;
+        }
+
+        @media @query-min-largeDevice {
+            padding: 10px 15px;
+        }
+
+        @media @query-min-hd {
+            padding: 15px 20px;
+        }
+    }
+
+    &__img {
+        max-width: 50%;
+        max-height: 35px;
+
+        @media @query-min-smallDevice {
+            max-height: 40px;
+        }
+
+        img {
+            display: block;
+            width: auto;
+        }
+
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title {
+        display: block;
+        font-family: @font-family-tradegothic-com;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        margin-top: auto;
+
+        @media @query-min-smallDevice {
+            font-size: 22px;
+        }
+
+        @media @query-min-largeDevice {
+            font-size: 17px;
+        }
+
+        @media @query-min-hd {
+            font-size: 22px;
+        }
+    }
+
+    &__desc {
+        font-weight: 300;
+        font-size: 14px;
+        color: white;
+
+        @media @query-min-smallDevice {
+            font-size: 16px;
+        }
+
+        @media @query-min-largeDevice {
+            font-size: 14px;
+        }
+
+        @media @query-min-hd {
+            font-size: 16px;
+        }
+    }
+}

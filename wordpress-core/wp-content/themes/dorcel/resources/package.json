@@ -1,0 +1,70 @@
+{
+  "name": "dorcel_blog",
+  "version": "1.0.0",
+  "description": "Dorcel Blog",
+  "main": "index.js",
+  "dependencies": {
+    "less": "^3.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "autoprefixer": "^9.7.2",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "cache-loader": "^4.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.3.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "less-loader": "^5.0.0",
+    "less-plugin-clean-css": "^1.5.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "minimatch": "^3.0.4",
+    "node-sass": "^4.13.0",
+    "postcss-less": "^3.1.4",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "querystring": "^0.2.0",
+    "resolve-url-loader": "^3.1.1",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
+  },
+  "scripts": {
+    "serve": "node compiler/serve",
+    "start": "node compiler/serve",
+    "build": "node compiler/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/FireyFly89/dorcel.git"
+  },
+  "author": "Krisztián Lakatos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/FireyFly89/dorcel/issues"
+  },
+  "homepage": "https://gitlab.com/FireyFly89/dorcel#readme",
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "android 4",
+    "opera 12",
+    "ie >= 10",
+    "ie_mob >= 10",
+    "ff >= 30",
+    "chrome >= 34",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4.4",
+    "bb >= 10",
+    "not dead"
+  ]
+}

@@ -1,0 +1,43 @@
+# Ignore everything
+/*
+
+# Un-ignore utility stuff
+!.editorconfig
+!composer.json
+!composer.lock
+!package.json
+!package-lock.json
+!bin/
+!assets/
+!.gitignore
+!.env-example
+
+# Including wordpress stuff
+!wordpress-core
+wordpress-core/*
+!wordpress-core/wp-content
+wordpress-core/wp-content/*
+!wordpress-core/wp-content/plugins
+wordpress-core/wp-content/plugins/*
+!wordpress-core/wp-content/themes
+wordpress-core/wp-content/themes/*
+!wordpress-core/wp-content/themes/dorcel/
+wordpress-core/wp-content/themes/dorcel/style.css
+
+# Webpack stuff
+wordpress-core/wp-content/themes/dorcel/resources/node_modules
+
+# Un-ignoring necessary files
+!wordpress-core/wp-config.php
+
+# Un-ignoring must have plugins
+!wordpress-core/wp-content/plugins/dorcel-widgets
+!wordpress-core/wp-content/plugins/sitepress-multilingual-cms
+!wordpress-core/wp-content/plugins/wp-seo-multilingual
+!wordpress-core/wp-content/plugins/wpml-*
+
+# Ignore custom stuff
+wordpress-core/wp-content/plugins/dorcel-widgets/assets/feeds/*
+!wordpress-core/wp-content/plugins/dorcel-widgets/assets/
+wordpress-core/wp-content/themes/dorcel/less-watch-compiler.config.json
+wordpress-core/wp-content/themes/dorcel/main.css

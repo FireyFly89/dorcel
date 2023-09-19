@@ -1,0 +1,25 @@
+{
+  "name": "dorcel_blog",
+  "version": "1.0.0",
+  "description": "Dorcel Blog",
+  "main": "index.js",
+  "dependencies": {
+    "less": "^3.9.0"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "init": "bash ./bin/less_watcher.sh",
+    "compile": "bash ./bin/less_compile.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/FireyFly89/dorcel.git"
+  },
+  "author": "Krisztián Lakatos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/FireyFly89/dorcel/issues"
+  },
+  "homepage": "https://gitlab.com/FireyFly89/dorcel#readme"
+}

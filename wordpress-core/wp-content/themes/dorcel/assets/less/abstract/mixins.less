@@ -1,0 +1,282 @@
+/*
+ * Modifies the look of the original WPML language switcher dropdown
+ *
+ * @param direction (down, up)
+ * @param colorScheme (dark, light)
+ * @param outerBorders 1: (all, desktop, none), 2: (top, bottom, both)
+ * @param alignment (left, center, right)
+ */
+.languageSelector(@direction: down; @colorScheme: dark; @outerBorders: none; @alignment: center;) {
+    @borderResolution: extract(@outerBorders, 1);
+
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 0.74px;
+    justify-content: center;
+    cursor: pointer;
+
+    .wpml-ls-current-language {
+        & when (@colorScheme = dark) {
+            border: 1px solid @footer-section-color-border;
+        }
+    }
+
+    & when (@alignment = right) {
+        justify-content: flex-end;
+    }
+
+    & when (@alignment = left) {
+        justify-content: flex-start;
+    }
+
+    .wpml-ls {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        cursor: pointer;
+        font-size: 15px;
+        border-radius: 3px;
+        background-color: transparent;
+
+        ul {
+            width: 100%;
+
+            &.wpml-ls-sub-menu {
+                background-color: white;
+                border: 1px solid @footer-section-color-border;
+
+                & when (@direction = up) {
+                    border-bottom: 0;
+
+                    & when (@colorScheme = light) {
+                        position: absolute;
+                        top: auto;
+                        bottom: 100%;
+                        left: -1px;
+                        border-top-right-radius: 3px;
+                        border-top-left-radius: 3px;
+                    }
+
+                    & when (@colorScheme = dark) {
+                        display: none;
+                        position: relative;
+                        bottom: auto;
+                        top: 100%;
+                        border-bottom-right-radius: 3px;
+                        border-bottom-left-radius: 3px;
+                    }
+
+                    @media @query-min-mediumDevice {
+                        position: absolute;
+                        top: auto;
+                        bottom: 100%;
+                        left: -1px;
+                        border-top-right-radius: 3px;
+                        border-top-left-radius: 3px;
+                    }
+
+                    li {
+                        & when (@colorScheme = light) {
+                            border-bottom: 1px solid @footer-section-color-border;
+                        }
+
+                        & when (@colorScheme = dark) {
+                            border-bottom: 1px solid @footer-section-color-border;
+                        }
+
+                        &:last-of-type a {
+                            border-top-right-radius: 3px;
+                            border-top-left-radius: 3px;
+                        }
+                    }
+                }
+
+                & when (@direction = down) {
+                    li:last-of-type a {
+                        border-bottom-right-radius: 3px;
+                        border-bottom-left-radius: 3px;
+                    }
+                }
+
+                & when (@colorScheme = dark) {
+                    background-color: @footer-section-color-background;
+                }
+
+                @media @query-min-mediumDevice {
+                    & when (@colorScheme = light) {
+                        background-color: @languageswitcher-default-background-color;
+                    }
+                }
+            }
+
+            li {
+                &:hover > a {
+                    background-color: transparent;
+                }
+
+                a {
+                    padding: 9px 14px;
+                    border: 0;
+                    background-color: transparent;
+
+                    &:focus {
+                        background-color: transparent;
+                    }
+
+                    span {
+                        font-family: @font-family-helvetica;
+                        text-transform: capitalize;
+
+                        & when (@colorScheme = dark) {
+                            color: white;
+                        }
+
+                        & when (@colorScheme = light) {
+                            color: @languageswitcher-default-text-color;
+                        }
+                    }
+
+                    &.wpml-ls-item-toggle {
+                        border-radius: 3px;
+
+                        &::after:extend(.fa-icons .chevron .right) {
+                            top: auto;
+                            right: 20px;
+                            border: 0;
+
+                            & when (@colorScheme = dark) {
+                                color: white;
+                            }
+
+                            & when (@colorScheme = light) {
+                                color: @languageswitcher-default-text-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media @query-min-mediumDevice {
+            width: 85%;
+            background-color: transparent;
+            font-size: 20px;
+
+            & when (@colorScheme = light) {
+                border: 1px solid @footer-section-color-border;
+            }
+
+            ul.wpml-ls-sub-menu {
+                background-color: transparent;
+            }
+
+            ul li {
+                &:hover > a {
+                    & when (@colorScheme = dark) {
+                        background-color: lighten(@selectbox-color-background, 10%);
+                    }
+
+                    & when (@colorScheme = light) {
+                        background-color: darken(@languageswitcher-default-background-color, 10%);
+                    }
+                }
+
+                a {
+                    & when (@colorScheme = dark) {
+                        background-color: @selectbox-color-background;
+                    }
+
+                    & when (@colorScheme = light) {
+                        background-color: @languageswitcher-default-background-color;
+                    }
+
+                    &:focus {
+                        & when (@colorScheme = dark) {
+                            background-color: lighten(@selectbox-color-background, 10%);
+                        }
+
+                        & when (@colorScheme = light) {
+                            background-color: darken(@languageswitcher-default-background-color, 10%);
+                        }
+                    }
+
+                    &.wpml-ls-item-toggle::after {
+                        transform: rotateZ(-90deg);
+                    }
+                }
+            }
+        }
+    }
+
+    & when (@borderResolution = all) {
+        @borderResolution: extract(@outerBorders, 2);
+        padding: 20px 0;
+
+        & when (@borderResolution = both) {
+            border-top: 1px solid @footer-section-color-border;
+            border-bottom: 1px solid @footer-section-color-border;
+        }
+
+        & when (@borderResolution = bottom) {
+            border-bottom: 1px solid @footer-section-color-border;
+        }
+
+        & when (@borderResolution = top) {
+            border-top: 1px solid @footer-section-color-border;
+        }
+    }
+
+    & when (@borderResolution = desktop) {
+        @borderResolution: extract(@outerBorders, 2);
+
+        @media @query-min-mediumDevice {
+            padding: 20px 0;
+
+            & when (@borderResolution = both) {
+                border-top: 1px solid @footer-section-color-border;
+                border-bottom: 1px solid @footer-section-color-border;
+            }
+
+            & when (@borderResolution = bottom) {
+                border-bottom: 1px solid @footer-section-color-border;
+            }
+
+            & when (@borderResolution = top) {
+                border-top: 1px solid @footer-section-color-border;
+            }
+        }
+    }
+}
+
+.innerBox(@zindex: 1;) {
+    position: absolute;
+    z-index: @zindex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper(@max-width: 768px;@padding: 15px;) {
+    max-width: @max-width;
+    width: calc(100% - (@padding * 2));
+    padding-left: @padding;
+    padding-right: @padding;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.coverImg(@obj-fit: cover;@obj-pos: top center) {
+    object-fit: @obj-fit;
+    object-position: @obj-pos;
+}
+
+.hoverScale(@scale:1.05) {
+    transition: transform @transition-fast-ease;
+
+    &:hover {
+        transform: scale(@scale);
+    }
+}

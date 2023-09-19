@@ -1,0 +1,33 @@
+.page-body__content {
+    &:not(.page-404__content) {
+        padding-bottom: 20px;
+    }
+
+    &.full-width {
+        max-width: 100%;
+        flex: 0 1 100%;
+    }
+
+    .page__content:extend(.content-elements all) {
+        width: 100%;
+
+        h1 {
+            font-family: @font-family-tradegothic-com;
+            font-size: 20px;
+            font-weight: @virtual-reality-section-title-font-weight;
+            letter-spacing: var(--widget-title-letter-spacing);
+            color: white;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media @query-min-mediumDevice {
+                font-size: 30px;
+                letter-spacing: @single-title-letter-spacing;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.section-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-family: @font-family-tradegothic-com;
+    font-weight: @virtual-reality-section-title-font-weight;
+    font-size: @virtual-reality-section-title-font-size;
+    line-height: @virtual-reality-section-title-font-line-height;
+    letter-spacing: @widget-text-letter-spacing;
+
+    @media @query-min-smallDevice {
+        font-size: 30px;
+        letter-spacing: 0.7px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &--left:extend(.section-title) {
+        text-align: left;
+
+        a {
+            &:extend(.section-title a);
+        }
+    }
+
+    a {
+        font-size: 15px;
+        color: @generic-active-color-font;
+        text-decoration: none;
+        font-family: @font-family-helvetica;
+        font-weight: 400;
+    }
+}
+
+p {
+    word-break: break-word;
+}
+
+.cta-title {
+    padding: 15px;
+    width: 100%;
+
+    @media @query-min-smallDevice {
+        text-align: center;
+    }
+
+    h2 {
+        @media @query-min-smallDevice {
+            font-size: 48px;
+        }
+    }
+
+    a {
+        color: @generic-active-color-font;
+        text-decoration: none;
+
+        @media @query-min-smallDevice {
+            font-size: 19px;
+        }
+    }
+}
+
+.fa, .fab, .fal, .far, .fas {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-family: @font-family-tradegothic-com;
+    font-weight: 700;
+}

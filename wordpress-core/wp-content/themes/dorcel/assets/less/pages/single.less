@@ -1,0 +1,197 @@
+.article {
+    flex-direction: column;
+    margin-top: 30px;
+
+    &__banner {
+        grid-row: 1;
+
+        & + .page-body {
+            margin-top: 0 !important;
+            padding-top: 30px;
+
+            @media @query-min-smallDevice {
+                padding-top: 60px;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: var(--article-banner-height);
+            object-fit: cover;
+            object-position: top center;
+        }
+    }
+
+    &__content {
+        margin: 0 -15px;
+        padding: 0 0 15px;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+
+        @media @query-min-mediumDevice {
+            margin: 0;
+        }
+    }
+
+    &__siblings {
+        display: flex;
+        margin: 0 -15px;
+        flex: 1 1 100%;
+        align-items: stretch;
+        justify-content: space-between;
+
+        @media @query-min-mediumDevice {
+            margin: 0;
+        }
+    }
+
+    &--prev,
+    &--next {
+        display: flex;
+        margin-top: 25px;
+        flex: 0 1 @widget-normal-article-max-width;
+        flex-direction: column;
+        box-shadow: @widget-box-shadow;
+
+        .custom-widget__thumbnail {
+            text-decoration: none;
+            background-color: transparent;
+
+            img {
+                border-style: none;
+            }
+        }
+
+        &__meta {
+            display: flex;
+            padding: 10px 15px;
+            flex-direction: row;
+            align-items: center;
+            background-color: @body-color-background;
+
+            i {
+                padding: 3px 0;
+            }
+        }
+
+        &__title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1 1 auto;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.27em;
+            font-family: @font-family-tradegothic-com;
+            letter-spacing: @widget-text-letter-spacing;
+            text-decoration: none;
+            background-color: transparent;
+            color: @widget-font-color;
+        }
+
+        @media @query-min-smallDevice {
+            &__meta {
+                max-width: none;
+                padding: 15px 20px;
+            }
+
+            &__title {
+                font-size: 16px;
+            }
+        }
+
+        @media @query-min-mediumDevice {
+            &__title {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &--prev__title {
+        padding-left: 5px;
+    }
+
+    @media @query-min-smallDevice {
+        margin-left: 20px;
+    }
+
+    &__header {
+        flex: 1 1 100%;
+    }
+
+    &__category {
+        color: @generic-active-color-font;
+        font-size: @single-category-font-size;
+        margin: 0;
+        font-weight: @single-category-font-weight;
+        text-decoration: none;
+    }
+
+    &__title {
+        font-size: @single-title-font-size;
+        color: white;
+        font-weight: @single-title-font-weight;
+        letter-spacing: @widget-text-letter-spacing;
+        font-family: @font-family-tradegothic-com;
+        line-height: 1;
+    }
+
+    &__content:extend(.content-elements all) {
+        border-radius: @video-list-item-border-radius;
+        box-shadow: @widget-box-shadow;
+        padding: 15px;
+        line-height: 19px;
+        overflow: hidden;
+        flex: 1 1 100%;
+
+        [id^="attachment_"] {
+            max-width: 100%;
+        }
+
+        img {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            margin: 30px auto;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        a:not(.btn) {
+            color: @generic-active-color-font;
+        }
+
+        iframe {
+            max-width: 100%;
+        }
+
+        @media @query-min-mediumDevice {
+            padding: 30px 0 15px;
+        }
+    }
+
+    &__share {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+
+        @media @query-min-smallDevice {
+            display: inline-flex;
+            flex-direction: row;
+        }
+
+        .btn {
+            width: auto;
+            margin-bottom: 10px;
+
+            @media @query-min-smallDevice {
+                &:first-of-type {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}

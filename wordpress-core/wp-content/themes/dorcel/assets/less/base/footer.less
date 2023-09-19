@@ -1,0 +1,276 @@
+.footer-section {
+    position: relative;
+    margin-top: @footer-section-margin;
+    padding: @footer-section-padding;
+    grid-area: footer;
+    border-top: 1px solid #4D4D4D;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: @footer-section-max-width;
+        margin: 0 auto;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__meta {
+        > p {
+            color: @generic-active-color-font;
+            font-family: @font-family-tradegothic-com;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            font-size: 17px;
+            line-height: 21px;
+            margin-top: 0;
+
+            @media @query-min-smallDevice {
+                margin-bottom: 30px;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                margin-bottom: 10px;
+
+                @media @query-min-smallDevice {
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    color: white;
+                    font-size: 16px;
+                    line-height: 20px;
+                    text-decoration: none;
+                    transition: color @transition-fast-ease;
+
+                    &:hover {
+                        color: @generic-active-color-font;
+                    }
+                }
+            }
+        }
+    }
+
+    &__elem {
+        &__main {
+            &__head {
+                color: @generic-active-color-font;
+                font-family: @font-family-tradegothic-com;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+                font-size: 20px;
+                line-height: 24px;
+
+                @media @query-min-smallDevice {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &__wrapper {
+                margin-top: 60px;
+
+                @media @query-min-smallDevice {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &__sub {
+            flex-basis: 100%;
+            margin-bottom: 10px;
+
+            @media @query-min-smallDevice {
+                flex-basis: 50%;
+                margin-bottom: 20px;
+
+                &:not(:nth-child(odd)) {
+                    margin-top: -50px;
+                }
+            }
+
+            &__wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+
+                @media @query-min-smallDevice {
+                    flex-direction: row;
+                }
+            }
+
+            a {
+                color: white;
+                text-transform: uppercase;
+                font-size: 16px;
+                line-height: 20px;
+                text-decoration: none;
+                transition: color @transition-fast-ease;
+
+                &:hover {
+                    color: @generic-active-color-font;
+                }
+
+                p {
+                    font-size: 16px;
+                    text-transform: none;
+                    margin: 5px 0 0;
+                }
+            }
+        }
+
+        &s {
+            flex-basis: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 55px;
+
+            @media @query-min-smallDevice {
+                flex-wrap: nowrap;
+            }
+
+            @media @query-min-mediumDevice {
+                margin-top: 0;
+                flex-basis: 66.66%;
+            }
+
+            > * {
+                flex-basis: 100%;
+
+                @media @query-min-smallDevice {
+                    flex-basis: 66.66%;
+                    padding-right: 30px;
+
+                    &:first-child {
+                        flex-basis: 33.33%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__others {
+        order: -1;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+
+        @media @query-min-smallDevice {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media @query-min-mediumDevice {
+            order: 1;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+
+    &__languageselector {
+        text-align: center;
+        padding-bottom: 35px;
+        width: 100%;
+
+        @media @query-min-smallDevice {
+            width: auto;
+            padding-bottom: 0;
+        }
+
+        @media @query-min-mediumDevice {
+            padding-bottom: 62px;
+        }
+
+        .wpml-ls {
+            width: 100%;
+            min-width: 300px;
+            display: inline-block;
+            background: white !important;
+            border-radius: 20px;
+
+            @media @query-min-smallDevice {
+                width: auto;
+            }
+
+            ul li a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: white !important;
+                color: black !important;
+                border: 0;
+                font-size: 17px;
+                padding: 11px 22px;
+
+                &:first-of-type {
+                    border-radius: 20px;
+                }
+
+                & + ul li {
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .wpml-ls-legacy-dropdown-click {
+            a.wpml-ls-item-toggle::after {
+                position: static;
+                border: 0;
+                width: 18px;
+                height: 10px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url('@{path-images}/caret.svg');
+                margin-left: 10px;
+                filter: brightness(0);
+            }
+
+            .wpml-ls-sub-menu {
+                width: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                background: black;
+                border: 0;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        @media @query-min-smallDevice {
+            max-width: 280px;
+        }
+
+        p {
+            flex-basis: 100%;
+            font-size: 17px;
+            line-height: 22px;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+
+        i {
+            font-size: 27px;
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        font-size: 14px;
+    }
+}

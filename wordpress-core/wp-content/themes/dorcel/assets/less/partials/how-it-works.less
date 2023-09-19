@@ -1,0 +1,105 @@
+.how-it-works {
+    .wrapper(@max-width: 992px; @padding: 15px;);
+    padding-top: 30px;
+
+    @media @query-min-mediumDevice {
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    h1 {
+        font-family: @font-family-tradegothic-com;
+        font-size: 20px;
+        font-weight: @virtual-reality-section-title-font-weight;
+        line-height: @virtual-reality-section-title-font-line-height;
+        letter-spacing: var(--widget-title-letter-spacing);
+        color: white;
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        @media @query-min-mediumDevice {
+            font-size: 30px;
+            line-height: @single-title-letter-spacing;
+            letter-spacing: @single-title-letter-spacing;
+            margin-bottom: 25px;
+        }
+    }
+
+    .page-body .page-body__content & p {
+        font-size: 15px;
+        letter-spacing: var(--widget-title-letter-spacing);
+        color: white;
+        margin: 0 0 10px;
+        text-align: center;
+
+        &.bold-title {
+            margin-top: 25px;
+            font-weight: 700;
+        }
+
+        @media @query-min-mediumDevice {
+            font-size: 20px;
+            letter-spacing: var(--widget-title-letter-spacing);
+            margin: 0 0 5px;
+        }
+    }
+
+    figure {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        box-shadow: @widget-box-shadow;
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 45px;
+
+        @media @query-min-mediumDevice {
+            height: 290px;
+            width: 290px;
+            margin-top: 30px;
+            margin-bottom: 75px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        figcaption {
+            position: absolute;
+            top: calc(100% + 15px);
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: @widget-categories-letter-spacing;
+            text-align: center;
+            color: white;
+
+            @media @query-min-mediumDevice {
+                font-size: 15px;
+                letter-spacing: @widget-text-letter-spacing;
+                top: calc(100% + 25px);
+            }
+        }
+    }
+
+    .btn-wrap {
+        max-width: 390px;
+        width: 100%;
+        margin: 0 auto 40px;
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            text-align: center;
+            margin-bottom: 10px;
+
+            @media @query-min-mediumDevice {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.icon-list {
+    .wrapper(@max-width: 1040px;@padding: 15px;);
+    display: flex;
+    align-items: flex-end;
+    margin-top: 50px;
+    flex-wrap: wrap;
+
+    &-item {
+        flex-basis: calc(50% - 30px);
+        margin-bottom: 15px;
+        padding: 0 15px;
+        text-align: center;
+
+        @media @query-min-smallDevice {
+            flex-basis: calc(25% - 30px);
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 13px;
+            line-height: 1.15;
+            letter-spacing: 0.06px;
+        }
+    }
+}

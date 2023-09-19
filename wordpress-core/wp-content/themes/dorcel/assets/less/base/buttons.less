@@ -1,0 +1,75 @@
+.btn {
+    transition: all @transition-fast-ease;
+    display: inline-block;
+    color: white;
+    padding: 13px 15px;
+    font-weight: @button-font-weight;
+    font-size: @button-font-size;
+    border-radius: @button-border-radius;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+    font-family: @font-family-tradegothic-com;
+    text-transform: uppercase;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+
+    &--main {
+        background: @generic-active-color-font;
+        border: 0;
+    }
+
+    &--social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+        line-height: 1;
+        max-height: 50px;
+    }
+
+    &--facebook {
+        background: @button-color-facebook;
+    }
+
+    &--twitter {
+        background: @button-color-twitter;
+    }
+
+    &--link {
+        color: white;
+        font-weight: 300;
+        text-decoration: underline;
+        font-size: 18px;
+    }
+
+    &--outline {
+        border: 1px solid white;
+        font-weight: 400;
+        padding: 10px 25px;
+        font-size: 20px;
+    }
+
+    &--icon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    i, svg {
+        font-size: 20px;
+        color: white;
+        margin-left: 10px;
+
+        path,
+        polygon {
+            fill: white;
+        }
+    }
+}
+
+.obfuscated-url {
+    cursor: pointer;
+}

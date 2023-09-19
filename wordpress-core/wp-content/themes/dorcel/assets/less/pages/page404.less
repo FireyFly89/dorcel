@@ -1,0 +1,93 @@
+.page-body {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.error404 .footer-section {
+    margin-top: 0;
+}
+
+.page-404__content {
+    display: flex;
+    max-width: 1160px;
+    padding: 0 30px;
+    margin: 20px auto 0 auto;
+    flex: 1 1 auto;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.page-404 {
+    &__text {
+        width: 100%;
+        margin-top: 25px;
+        color: @body-color-font;
+        font-family: @font-family-tradegothic-com;
+        z-index: 1;
+        text-align: center;
+
+        @media @query-min-smallDevice {
+            text-align: left;
+            flex: 1 1 60%
+        }
+
+        &--bold {
+            font-size: 20px;
+            font-weight: @single-title-font-weight;
+            letter-spacing: 2px;
+
+            @media @query-min-smallDevice {
+                font-size: 40px;
+            }
+
+            &:not(:first-of-type) {
+                margin: 28px;
+                @media @query-min-smallDevice {
+                    margin: 50px 0;
+                }
+            }
+        }
+
+        &--normal {
+            font-size: 15px;
+            letter-spacing: 3px;
+
+            @media @query-min-smallDevice {
+                font-size: 32px;
+                letter-spacing: 5px;
+            }
+        }
+    }
+
+    &__img {
+        display: none;
+
+        @media @query-min-smallDevice {
+            display: block;
+            flex: 1 1 auto;
+            margin: 20px 0 -6px -115px;
+
+            img {
+                max-height: 540px;
+            }
+        }
+    }
+
+    &__btn--wrapper {
+        text-align: center;
+
+        @media @query-min-smallDevice {
+            text-align: left;
+        }
+
+        .btn {
+            margin: 34px auto;
+
+            @media @query-min-smallDevice {
+                margin-top: 60px;
+                margin-bottom: 75px;
+            }
+        }
+    }
+}

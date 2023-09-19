@@ -1,0 +1,275 @@
+// variable structure to follow: @{element-name}-{type}-{modifier}: value(s);
+// Paths (relative to style.css)
+@path-fonts: "./assets/fonts/";
+@path-images: "./assets/images";
+
+// Colours
+@body-color-background: #000000;
+@body-color-font: #ffffff;
+@generic-color-border: #aaaaaa;
+@generic-active-color-font: #e2006a;
+@selectbox-color-background: #2b2b2b;
+
+// Sizes
+@body-width-size: var(--body-width-size); // use it as max-width
+@body-sidebar-size: var(--body-sidebar-size);
+@body-sidebar-margin: 20px;
+@body-content-size: calc(@body-width-size - @body-sidebar-size - @body-sidebar-margin);
+@body-side-padding: var(--body-side-padding);
+@aspect-ratio-16-9: 1.777777777777778;
+@footer-section-max-width: var(--footer-section-max-width);
+
+// Font families
+@font-family-helvetica: 'Helvetica Neue';
+@font-family-tradegothic-com: 'Trade Gothic LT Com Cn';
+@font-family-tradegothic: 'TradeGothic LT';
+@font-family-northwell: 'Northwell';
+
+// Legacy Font families
+@font-family-roboto: Roboto, Helvetica, Arial, serif;
+@font-family-gotham: Gotham, Helvetica, Arial, serif;
+@font-family-gotham-bold: 'Gotham Condensed Bold', Helvetica, Arial, serif;
+
+// Header-section related
+@header-section-color-shadow: #BBBBBB;
+@header-section-size-font: 20px;
+@header-section-size-padding: var(--header-section-size-padding);
+@header-section-elems-size-padding: 60px;
+@header-section-logo-height: var(--header-section-logo-height);
+@header-section-width-open: 320px;
+@header-section-padding-side: var(--header-section-menu-padding-side);
+@header-section-gap-height: var(--header-section-gap-height);
+@header-section-sub-menu-letter-spacing: var(--header-section-sub-menu-letter-spacing);
+
+// Footer-section related
+@footer-section-color-background: #333333;
+@footer-section-color-border: #595959;
+@footer-section-padding: var(--footer-section-padding);
+@footer-section-margin: var(--footer-section-margin);
+
+// Language switcher related
+@languageswitcher-default-background-color: #f8f8f8;
+@languageswitcher-default-text-color: #191919;
+
+// Widget related
+@widget-shadow-color: rgba(0, 0, 0, 0.15);
+@widget-box-shadow: 0 0 15px 0 @widget-shadow-color;
+@widget-text-letter-spacing: 0.5px;
+@widget-categories-letter-spacing: 0.35px;
+@widget-title-letter-spacing: var(--widget-title-letter-spacing);
+@widget-normal-article-max-width: calc(50% - (@widget-horizontal-margin / 2));
+@widget-sidebar-article-max-width: @body-sidebar-size;
+@widget-sidebar-aticle-max-height: var(--widget-sidebar-aticle-max-height);
+@widget-horizontal-margin: 20px;
+@widget-vertical-margin: var(--widget-vertical-margin);
+@widget-title-font-size: var(--widget-title-font-size);
+@widget-article-category-font-size: var(--widget-article-category-font-size);
+@widget-sidebar-article-category-font-size: var(--widget-sidebar-article-category-font-size);
+@widget-article-title-font-size: var(--widget-article-title-font-size);
+@widget-sidebar-article-title-font-size: var(--widget-sidebar-article-title-font-size);
+@widget-article-excerpt-font-size: var(--widget-article-excerpt-font-size);
+@widget-font-color: white;
+@widget-border-pagination: 0.5px solid #BBBBBB;
+@widget-background-color-current-pagination: #E9E9E9;
+@widget-color-pagination-arrow: #B9B9B9;
+@widget-font-color-current-pagination: #595959;
+@widget-thumbnail-width-sidebar-article: var(--widget-thumbnail-width-sidebar-article);
+
+// Buttons
+@button-font-weight: 700;
+@button-font-size: var(--button-font-size);
+@button-border-radius: 30px;
+@button-hover-size: 1.025;
+@button-color-facebook: #45619c;
+@button-color-twitter: #02abee;
+@ajax-btn-width: var(--ajax-btn-width);
+
+// Virtual Reality page
+@virtual-reality-section-title-font-size: 20px;
+@virtual-reality-section-title-font-weight: 700;
+@virtual-reality-section-title-font-line-height: 1.15;
+@hero-vertical-gradient: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 1) 100%);
+@hero-horizontal-gradient: linear-gradient(to bottom, rgba(25, 25, 25, 0), rgba(25, 25, 25, 0.7));
+@hero-title-font-size: var(--hero-title-font-size);
+@hero-title-line-height: var(--hero-title-line-height);
+@video-list-image-size: var(--video-list-image-size);
+@video-list-item-border-radius: 3px;
+@video-list-category-font-size: var(--video-list-category-font-size);
+@video-list-item-title-color: white;
+@video-list-item-title-font-size: var(--video-list-item-title-font-size);
+@video-list-item-content-font-size: var(--video-list-item-content-font-size);
+@video-list-item-content-line-height: var(--video-list-item-content-line-height);
+
+// Single Article / Page
+@single-category-font-size: var(--single-category-font-size);
+@single-category-font-weight: 500;
+@single-title-font-size: var(--single-title-font-size);
+@single-title-letter-spacing: 0.7px;
+@single-title-font-weight: 700;
+@single-content-font-size: var(--single-content-font-size);
+@article-banner-height: var(--article-banner-height);
+
+// Disclaimer
+@disclaimer-background-url: var(--disclaimer-background-url);
+@disclaimer-textarea-color: #4f4f50;
+@disclaimer-border-color: #f0eff5;
+
+// Pagination
+@pagination-block-size: 35px;
+@pagination-arrow-margin: 15px;
+@pagination-element-margin: 40px 0 20px 0;
+
+// Studios
+@headline-banner-height: var(--headline-banner-height);
+@headline-banner-img-height: 300px;
+@studios-item-img-height: var(--studios-item-img-height);
+@collection-featured-item-height: 280px;
+@collection-item-width: var(--collection-item-width);
+@collection-img-height: var(--collection-img-height);
+@catalog-item-height: var(--catalog-item-height);
+
+// Actress
+@actress-banner-height: var(--actress-banner-height);
+@actress-banner-background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 70%);
+@actress-banner-title-height: 90px;
+@actress-articleslider-image-height: var(--actress-articleslider-image-height);
+@actress-articleslider-offset: var(--actresss-articleslider-offset);
+@actress-filmslider-image-height: var(--actress-filmslider-image-height);
+@actress-filmslider-offset: 140px;
+@actress-photoslider-image-height: var(--actress-photoslider-image-height);
+@actress-photoslider-offset: 90px;
+
+// Animation timings
+@transition-fast-ease: 300ms ease;
+@transition-medium-ease: 500ms ease;
+@transition-slow-ease: 800ms ease;
+
+// Media query sizes
+@hd-device-res: 1600px; // desktop 3
+@hdReady-device-res: 1366px; // desktop 2
+@large-device-res: 1200px; // desktop 1
+@medium-device-res: 992px; // tablet
+@small-device-res: 768px; // mobile 1
+@extraSmall-device-res: 480px; // mobile 2
+@old-device-res: 375px; // mobile 3 (iphone 6, etc)
+
+// Media query shorthands (mobile first only)
+@query-min-hd: ~"(min-width: @{hd-device-res})";
+@query-min-hdReady: ~"(min-width: @{hdReady-device-res})";
+@query-min-largeDevice: ~"(min-width: @{large-device-res})";
+@query-min-mediumDevice: ~"(min-width: @{medium-device-res})";
+@query-min-smallDevice: ~"(min-width: @{small-device-res})";
+@query-min-extraSmallDevice: ~"(min-width: @{extraSmall-device-res})";
+@query-min-oldDevice: ~"(min-width: @{old-device-res})";
+
+// Global CSS variables for simpler responsivity
+:root {
+    --header-section-logo-height: 38px;
+    --header-section-size-padding: 20px;
+    --header-section-menu-padding-side: 30px;
+    --header-section-gap-height: 60px;
+    --footer-section-padding: 30px 15px 35px 15px;
+    --footer-section-max-width: 1240px;
+    --widget-title-font-size: 20px;
+    --widget-title-letter-spacing: 0.5px;
+    --widget-article-category-font-size: 12px;
+    --widget-sidebar-article-category-font-size: 10px;
+    --widget-article-title-font-size: 16px;
+    --widget-sidebar-article-title-font-size: 11px;
+    --widget-article-excerpt-font-size: 12px;
+    --widget-vertical-margin: 20px;
+    --widget-sidebar-aticle-max-height: 70px;
+    --body-side-padding: 15px;
+    --footer-section-margin: 48px;
+    --header-section-sub-menu-letter-spacing: 1px;
+    --video-list-image-size: 165px;
+    --video-list-category-font-size: 12px;
+    --video-list-item-title-font-size: 16px;
+    --video-list-item-content-font-size: 12px;
+    --single-category-font-size: 12px;
+    --single-title-font-size: 22px;
+    --single-content-font-size: 15px;
+    --video-list-item-content-line-height: 14px;
+    --hero-title-font-size: 20px;
+    --hero-title-line-height: 25px;
+    --disclaimer-background-url: url('@{path-images}/disclaimer-720.jpg');
+    --widget-thumbnail-width-sidebar-article: 173px;
+    --actress-banner-height: 330px;
+    --actress-articleslider-image-height: 215px;
+    --actress-filmslider-image-height: 220px;
+    --actress-photoslider-image-height: 140px;
+    --actresss-articleslider-offset: 25px;
+    --headline-banner-height: 90px;
+    --studios-item-img-height: 170px;
+    --collection-item-width: 120px;
+    --collection-img-height: 170px;
+    --catalog-item-height: 196px;
+    --ajax-btn-width: 200px;
+    --article-banner-height: 142px;
+    --button-font-size: 18px;
+
+    @media @query-min-smallDevice {
+        --header-section-logo-height: 42px;
+        --header-section-size-padding: 50px;
+        --header-section-menu-padding-side: 60px;
+        --header-section-gap-height: 85px;
+        --footer-section-padding: 60px 45px 30px 45px;
+        --header-section-sub-menu-letter-spacing: 0.38px;
+        --video-list-item-content-font-size: 16px;
+        --video-list-item-content-line-height: 21px;
+        --hero-title-font-size: 35px;
+        --hero-title-line-height: 45px;
+        --actress-filmslider-image-height: 330px;
+        --actress-photoslider-image-height: 240px;
+        --headline-banner-height: 300px;
+        --studios-item-img-height: 200px;
+        --collection-item-width: 200px;
+        --collection-img-height: 280px;
+        --catalog-item-height: 330px;
+        --article-banner-height: 300px;
+        --button-font-size: 20px;
+    }
+
+    @media @query-min-mediumDevice {
+        --body-sidebar-size: 300px;
+        --body-width-size: 962px;
+        --disclaimer-background-url: url('@{path-images}/disclaimer.jpg');
+        --widget-thumbnail-width-sidebar-article: 168px;
+        --ajax-btn-width: 290px;
+    }
+
+    @media @query-min-largeDevice {
+        --widget-title-font-size: 30px;
+        --widget-title-letter-spacing: 0.7px;
+        --widget-article-category-font-size: 15px;
+        --widget-sidebar-article-category-font-size: 15px;
+        --widget-article-title-font-size: 22px;
+        --widget-sidebar-article-title-font-size: 18px;
+        --widget-article-excerpt-font-size: 15px;
+        --widget-vertical-margin: 30px;
+        --widget-sidebar-aticle-max-height: 96px;
+        --body-side-padding: 30px;
+        --footer-section-margin: 30px;
+        --body-sidebar-size: 350px;
+        --body-width-size: 1140px;
+        --video-list-image-size: 320px;
+        --video-list-category-font-size: 14px;
+        --video-list-item-title-font-size: 22px;
+        --single-category-font-size: 15px;
+        --single-title-font-size: 30px;
+        --single-content-font-size: 18px;
+        --actress-banner-height: 420px;
+        --actresss-articleslider-offset: 400px;
+        --article-banner-height: 400px;
+    }
+
+    @media @query-min-hdReady {
+        --body-sidebar-size: 375px;
+        --body-width-size: 1300px;
+    }
+
+    @media @query-min-hd {
+        --body-sidebar-size: 400px;
+        --body-width-size: 1520px;
+    }
+}

@@ -1,0 +1,152 @@
+.page-magazine {
+    .page-body__content__pre {
+        margin-bottom: 50px;
+    }
+
+    .page-body__content {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        flex: 0 1 auto;
+        flex-direction: column;
+        font-family: @font-family-tradegothic-com;
+        font-weight: 700;
+        justify-content: center;
+
+        @media @query-min-extraSmallDevice {
+            flex-direction: row;
+        }
+
+        @media @query-min-mediumDevice {
+            padding: 0 50px;
+        }
+        @media @query-min-largeDevice {
+            padding: 0 150px;
+        }
+        @media @query-min-hd {
+            padding: 0 250px;
+        }
+
+        .magazine {
+            margin: 0 5px 10px;
+            border-radius: 3px;
+            height: auto;
+            flex-direction: column;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+
+            @media @query-min-extraSmallDevice {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 281px;
+            }
+
+            @media @query-min-mediumDevice {
+                width: 281px;
+            }
+
+            .custom-widget__thumbnail {
+                display: block;
+                max-width: 100%;
+                max-height: 393px;
+                overflow: hidden;
+                background-color: transparent;
+
+                img {
+                    width: 100%;
+                    border-style: none;
+                }
+            }
+
+            .magazine__meta {
+                display: flex;
+                padding: 13px 10px;
+                flex-direction: column;
+
+                .magazine__meta__category {
+                    .custom-widget__categories__wrapper {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .custom-widget__categories {
+                            color: @generic-active-color-font;
+                            font-size: var(--widget-article-category-font-size);
+                            font-family: @font-family-helvetica;
+                            letter-spacing: 0.35px;
+                            font-weight: 400;
+                            text-decoration: none;
+                            transition: color 800ms ease;
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+                .magazine__meta__title {
+                    font-size: var(--widget-article-title-font-size);
+                    margin: 5px 0;
+                }
+
+                .magazine__meta__excerpt {
+                    font-size: var(--widget-article-excerpt-font-size);
+                    line-height: 1.27em;
+                    font-family: @font-family-helvetica;
+                    font-weight: 400;
+                    text-align: justify;
+                }
+
+                .magazine__meta__title,
+                .magazine__meta__excerpt {
+                    color: white;
+                    text-decoration: none;
+                    letter-spacing: 0.5px;
+                    word-break: break-word;
+                }
+
+                a {
+                    text-decoration-line: none;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        display: flex;
+        margin: 40px 0 20px 0;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .page-numbers {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            color: @generic-active-color-font;
+            text-decoration: none;
+            background-color: transparent;
+
+            &:not(.prev):not(.next) {
+                font-size: 12px;
+                font-weight: 700;
+                border-top: @widget-border-pagination;
+                border-bottom: @widget-border-pagination;
+                border-right: @widget-border-pagination;
+                transition: background-color 500ms ease, color 500ms ease, border 500ms ease;
+            }
+
+            &:first-child:not(.prev), &.prev + * {
+                border-left: @widget-border-pagination;
+            }
+
+            &.current {
+                background-color: @widget-background-color-current-pagination;
+                color: @widget-font-color-current-pagination;
+
+                &:first-child {
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "name": "dorcel/wordpress",
+    "description": "Dorcel WordPress",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Krisztian Lakatos",
+            "email": "krisztian.lakatos@slsitservices.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "type": "webroot",
+                "name": "wordpress/wordpress",
+                "version": "5.3.0",
+                "dist": {
+                    "url": "https://wordpress.org/wordpress-5.3.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "fancyguy/webroot-installer": "1.*"
+                }
+            }
+        },
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "wordpress/wordpress": "5.3",
+        "drupal-composer/preserve-paths": "0.1.*",
+        "wp-cli/wp-cli": "2.*",
+        "vlucas/phpdotenv": "^2.2",
+        "yoast/wordpress-seo": "11.*",
+        "ext-simplexml": "*"
+    },
+    "license": "proprietary",
+	"extra": {
+        "installer-paths": {
+            "wordpress-core/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "wordpress-core/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "preserve-paths": [
+            "wordpress-core/wp-content/plugins",
+            "wordpress-core/wp-content/themes"
+        ],
+        "webroot-dir": "wordpress-core",
+        "webroot-package": "wordpress/wordpress"
+    }
+}

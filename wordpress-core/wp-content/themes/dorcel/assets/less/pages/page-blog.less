@@ -1,0 +1,131 @@
+.page-blog {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+
+    &__container {
+        .wrapper(@max-width:@body-width-size;@padding:@header-section-size-padding);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .page-body__content__pre {
+        .wrapper(@max-width:@body-width-size;@padding:@header-section-size-padding);
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &__container {
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+.blog__slider {
+    position: relative;
+    display: block;
+    max-width: calc(100% + 40px);
+    width: calc(100% + 40px);
+    margin: 0 -20px;
+}
+
+#blog_slider {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+
+    &:hover {
+        .slick-prev, .slick-next {
+            opacity: 0.95;
+        }
+    }
+
+    .post_slider_widget__wrapper {
+        max-width: 100%;
+    }
+
+    .post_slider_widget__item {
+        position: relative;
+        width: 100% !important;
+        height: @article-banner-height;
+    }
+
+    .slick-arrow {
+        transition: opacity @transition-medium-ease;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 4;
+        color: transparent;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        padding: 6px;
+        background-size: auto;
+        opacity: 0;
+
+        @media @query-min-smallDevice {
+            padding: 12px;
+        }
+
+        &.slick-prev {
+            left: 20px;
+            background: url("@{path-images}/arrow-black-left.svg") no-repeat;
+            background-size: contain;
+
+            @media @query-min-smallDevice {
+                left: 30px
+            }
+        }
+
+        &.slick-next {
+            right: 20px;
+            background: url("@{path-images}/arrow-black-right.svg") no-repeat;
+            background-size: contain;
+
+            @media @query-min-smallDevice {
+                right: 30px
+            }
+        }
+    }
+
+    .slick-dots {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media @query-min-smallDevice {
+            bottom: 25px;
+        }
+
+        li {
+            button {
+                font-size: 0;
+                padding: 0;
+                width: 6px;
+                height: 6px;
+                border: 0;
+                border-radius: 50%;
+                background-color: #4D4D4D;
+                transition: background-color ease-out .2s;
+                margin: 0 3px;
+                outline: none;
+
+                @media @query-min-smallDevice {
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 6px;
+                }
+            }
+
+            &.slick-active button {
+                background-color: white;
+            }
+        }
+    }
+}
